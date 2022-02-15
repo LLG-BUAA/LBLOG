@@ -39,6 +39,60 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/demo/style-demo.css" />
 
+
+    <!-- L2Dwidget.js L2D网页动画人物 -->
+    <!-- <script src="https://unpkg.com/live2d-widget-model-nietzche@1.0.5/assets/nietzche.model.json">
+    </script>
+    <script>
+        L2Dwidget.init({
+            "model": {
+                "jsonPath": "https://unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json",
+                "scale": 1,
+                "hHeadPos": 0.5,
+                "vHeadPos": 0.618
+            },
+            "display": {
+                "position": "right",
+                "width": 150,
+                "height": 150,
+                "hOffset": 0,
+                "vOffset": 0
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+
+            // 其他可选的模型：
+            // 小帅哥： https: //unpkg.com/live2d-widget-model-chitose@1.0.5/assets/chitose.model.json
+            //     萌娘： https: //unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json
+            //     白猫： https: //unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json
+            //     黑猫： https: //unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json
+            //     小可爱（ 女）： https: //unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json
+            //     小可爱（ 男）： https: //unpkg.com/live2d-widget-model-haruto@1.0.5/assets/haruto.model.json
+            //     初音： https: //unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json
+            //     圣职者妹妹： https: //unpkg.com/live2d-widget-model-z16@1.0.5/assets/z16.model.json
+            //     茶杯犬： https: //cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json
+            //     绿毛妹妹： https: //unpkg.com/live2d-widget-model-tsumiki@1.0.5/assets/tsumiki.model.json
+            //     金龟子妹妹： https: //unpkg.com/live2d-widget-model-unitychan@1.0.5/assets/unitychan.model.json
+            //     https: //unpkg.com/live2d-widget-model-nito@1.0.5/assets/nito.model.json
+            //     https: //unpkg.com/live2d-widget-model-ni-j@1.0.5/assets/ni-j.model.json
+            //     小阿狸： https: //unpkg.com/live2d-widget-model-nico@1.0.5/assets/nico.model.json
+            //     https: //unpkg.com/live2d-widget-model-nietzche@1.0.5/assets/nietzche.model.json
+            //     https: //unpkg.com/live2d-widget-model-nipsilon@1.0.5/assets/nipsilon.model.json
+            //     女学生： https: //unpkg.com/live2d-widget-model-hibiki@1.0.5/assets/hibiki.model.json
+
+        });
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+
 </head>
 
 <body>
@@ -137,11 +191,11 @@
                                 <br>
                                 <p style="color:rgb(73, 132, 180); font-size: 15px; line-height: 10px; text-indent: 20px;"> <a href="#H2" class="scroll">🎈 灵感 ：</a></p>
                                 <p style="color: rgb(78, 160, 180); font-size: 80%; text-indent: 45px; line-height: 5px;"> <a href="#H2_easy" class="scroll">`可直接访问的设计网站</a></p>
-                                <p style="color: rgb(78, 160, 180); font-size: 80%; text-indent: 45px; line-height: 5px;"><a href="#H3_difficult" class="scroll"> `科学上网方可访问的设计站</a></p>
+                                <p style="color: rgb(78, 160, 180); font-size: 80%; text-indent: 45px; line-height: 5px;"><a href="#H2_difficult" class="scroll"> `科学上网方可访问的设计站</a></p>
                                 <br>
                                 <p style="color:rgb(73, 132, 180); font-size: 15px; line-height: 10px; text-indent: 20px;"><a href="#H3" class="scroll">🤺 实战 ：</a></p>
                                 <p style="color: rgb(78, 160, 180); font-size: 80%; text-indent: 45px; line-height: 5px;"> <a href="#H3_before" class="scroll">`上手前必知</a></p>
-                                <p style="color: rgb(78, 160, 180); font-size: 80%; text-indent: 45px; line-height: 5px;"><a href="#H3_tools" class="scroll">`实用插件合集</a></p>
+                                <p style="color: rgb(78, 160, 180); font-size: 80%; text-indent: 45px; line-height: 5px;"><a href="#H3_tool" class="scroll">`实用插件合集</a></p>
                                 <p style="color: rgb(78, 160, 180); font-size: 80%; text-indent: 45px; line-height: 5px;"> <a href="#H3_operation" class="scroll">`一些必备的小操作</a></p>
                                 <br>
 
@@ -178,11 +232,153 @@
                                 <img id="H1_sucai" src="/assets/img/lines_fenge_line.jpeg">
                                 <p></p>
                                 <p style="color:rgb(67, 106, 212, 0.938); font-size: 15px; text-align: center; font-weight: 800; font-size: medium;"> Section Three : 素材（分类）资源收集</p>
-                                <p>所有的平台都在说自己的算法多么<span style="color: rgba(67, 106, 212, 0.938); font-weight: 800;">个性化</span>，但我们的内容真的更个性化了吗。我们回想一下，当你作为一名新用户去一个视频平台时，那时没有基于你的数据库，只有众人的大数据，那算法怎么选？</p>
-                                <p>你应该记得它会弹出许多关注度较高口碑较好的up主，你便跟着选了些（这里，算法根据大数据“控制”了你），之后你从他推荐的视频中点击观看，算法挑出你点击收藏多的方面并加入大数据库（你在被大数据算法影响的前提下影响了算法和数据库本身）...这样的无限叠加，如果没有某些主编的挖掘和重推，那些一开始算法就没选给你的内容只会离你越来越远！！（恶性循环）这是被<u><i><span style="color: rgba(67, 106, 212, 0.938); font-weight: 800;">束缚了的个性化啊！！！</span></u></i>
-                                </p>
+                                <br>
+
+                                <p style="color:rgba(67, 130, 212, 0.938); font-size: 12px; text-align: center; font-weight: 800; font-size: medium;"> 📸 图片素材 📸</p>
+
+                                <br>
+                                <!-- Gallery -->
+                                <div class="gallery-grid js-grid-row js-filter-container">
+                                    <div class="gutter-sizer"></div>
+                                    <!-- Item 1 -->
+                                    <figure class="gallery-grid__item category-concept">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="http://www.pexels.com/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/pexels.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">Pexels</h4>
+                                            <span class="gallery-grid__category">图片资源界的超级网红,个人最喜欢的图片资源网站！图美！下载快！便捷！</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 2 -->
+                                    <figure class="gallery-grid__item category-concept">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="500px.com/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/500px.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">500px</h4>
+                                            <span class="gallery-grid__category">很著名的摄影图片网站，下载要付费，但是也会有一些免费下载方式，自己动手丰衣足食~</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 3 -->
+                                    <figure class="gallery-grid__item category-design">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="pixabay.com/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/pixabay.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">PixaBay</h4>
+                                            <span class="gallery-grid__category">pixabay的图片储量惊人，只是下载前需要注册一个账号，图片当然是完全免费的，而且每张图片分为多种分辨率格式，很贴心！</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 4 -->
+                                    <figure class="gallery-grid__item category-design">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="cn.bing.com/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/bing.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">Bing.cn</h4>
+                                            <span class="gallery-grid__category">著名的 Microsoft 旗下图集，必应主页的今日美图，右下角可以保存，积少成多！</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 5 -->
+                                    <figure class="gallery-grid__item category-design">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="https://stocksnap.io/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/stiocksnap.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">Stiocksnap</h4>
+                                            <span class="gallery-grid__category">StockSnap是一个提供可自由下载使用的高清晰摄影图片素材库，网站由多位摄影师组成，提供丰富的免费照片，随意使用无需授权！</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 6 -->
+                                    <figure class="gallery-grid__item category-life">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="https://alpha.wallhaven.cc/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/wallhaven.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">Wallhaven</h4>
+                                            <span class="gallery-grid__category">下载图片不用注册，也不用翻墙，重点是图片的分辨率也高的出奇，经常会有一些3000x4000左右的高质量大图呐！</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 7 -->
+                                    <figure class="gallery-grid__item category-concept">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="magdeleine.co/browse/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/magdeleine.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">Magdeleine</h4>
+                                            <span class="gallery-grid__category">专注精致摄影作品的一个小众网站，风格些许独特~</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 8 -->
+                                    <figure class="gallery-grid__item category-design">
+                                        <div class="gallery-grid__image-wrap">
+                                            <a href="http://pngimg.com/">
+                                                <img class="gallery-grid__image cover lazyload" src="assets/img/post_img/post_img_ppt/PART_ONE/three/pngimg.jpeg" data-zoom alt="" />
+                                            </a>
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">Pngimg</h4>
+                                            <span class="gallery-grid__category">抠出来的图，可以当作素材模板来使用，几万张不同种类的无背景素材图片，直接可以免费用。注意它是全部都是无背景图片，非常适合那些需要png透明底配图的。而且分类详细，找起来方便的！</span>
+                                        </figcaption>
+                                    </figure>
+
+                                    <!-- Item 9 -->
+                                    <figure class="gallery-grid__item category-life">
+                                        <div class="gallery-grid__image-wrap">
+                                            <img class="gallery-grid__image cover lazyload" src="assets/img/image_05.jpg" data-zoom alt="" />
+                                        </div>
+                                        <figcaption class="gallery-grid__caption">
+                                            <h4 class="title title--h6 gallery-grid__title">Nothing Here.</h4>
+                                            <span class="gallery-grid__category">I'm looking for more ...</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- Gallery End -->
+
+                                <br>
+                                <a href="http://www.iconfont.cn/">
+                                    <img class="cover lazyload" src="/assets/img/post_img/post_img_ppt/PART_ONE/three/iconfon.png">
+                                </a>
+                                <br>
+                                <h4 class="title title--h6 gallery-grid__title">小图标/矢量素材站： <span style="font-weight: lighter;">阿里巴巴的官方图标库，直接中文搜索，要啥有啥</span></h4>
                                 <p></p>
+
+                                <br><br>
+
+                                <p style="color:rgba(67, 130, 212, 0.938); font-size: 12px; text-align: center; font-weight: 800; font-size: medium;"> 🎥 视频素材 🎥</p>
+
+                                <br>
+                                <a href="http://www.iconfont.cn/">
+                                    <img class="cover lazyload" src="/assets/img/post_img/post_img_ppt/PART_ONE/three/iconfon.png">
+                                </a>
+                                <br>
+                                <h4 class="title title--h6 gallery-grid__title">小图标/矢量素材站： <span style="font-weight: lighter;">阿里巴巴的官方图标库，直接中文搜索，要啥有啥</span></h4>
                                 <p></p>
+
+
+
                                 <img src="/assets/img/lines_fenge_line.jpeg">
                                 <p></p>
                                 <p style="color:rgb(67, 106, 212, 0.938); font-size: 15px; text-align: center; font-weight: 800; font-size: medium;"> 说了这么多并不是说拒绝算法，而是如何用好算法 .</p>
